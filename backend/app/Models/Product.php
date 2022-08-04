@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Section extends Model
+class Product extends Model
 {
     use HasFactory;
 
-    # Section has many products
-    public function products()
+    public function section()
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsTo(Section::class);
     }
 }

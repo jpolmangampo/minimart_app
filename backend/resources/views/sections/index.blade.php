@@ -4,20 +4,20 @@
 
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-6">
+    <div class="col-5">
         
-        <div class="rounded shadow px-3 py-4">
-            <h2 class="h4 text-info">Add New Section</h2>
-    
+        <h2 class="fw-light mb-3">Sections</h2>
+
+        <div class="mb-3">
             <form action="{{ route('section.store') }}" method="post">
                 @csrf
     
                 <div class="row gx-2">
                     <div class="col">
-                        <input type="text" name="name" placeholder="Add here..." class="form-control" autofocus>
+                        <input type="text" name="name" placeholder="Add new section here..." class="form-control" autofocus>
                     </div>
                     <div class="col-auto">
-                        <button type="submit" class="btn btn-info w-100"><i class="fa-solid fa-plus"></i> Add</button>
+                        <button type="submit" class="btn btn-info w-100 fw-bold"><i class="fa-solid fa-plus"></i> Add</button>
                     </div>
                 </div>
                 @error('name')
@@ -26,10 +26,10 @@
             </form>
         </div>
 
-        <table class="table table-hover table-sm table-borderless bg-white align-middle text-center mt-5">
+        <table class="table table-sm bg-white align-middle text-center">
             <thead class="table-info">
                 <tr>
-                    <th>#</th>
+                    <th>ID</th>
                     <th>NAME</th>
                     <th></th>
                 </tr>
@@ -43,9 +43,9 @@
                             <form action="{{ route('section.destroy', $section->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
-
-                                <button type="submit" class="btn btn-danger btn-sm" title="Delete">
-                                    <i class="fa-regular fa-trash-can"></i>
+                                
+                                <button type="submit" class="btn btn-outline-danger border-0" title="Delete">
+                                    <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </form>
                         </td>
@@ -53,13 +53,12 @@
                 @empty
                     <tr>
                         <td colspan="3">
-                            <div class="lead text-center">No sections.</div>
+                            <div class="lead text-center">No item to display.</div>
                         </td>
                     </tr>
                 @endforelse
             </tbody>
         </table>
-
     </div>
 </div>
 @endsection

@@ -32,7 +32,7 @@
                     @auth
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Products</a>
+                                <a href="{{ route('index') }}" class="nav-link">Products</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('section') }}" class="nav-link">Sections</a>
@@ -82,7 +82,7 @@
         <main class="py-5">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-8">
+                    <div class="col-9">
                         @yield('content')
                     </div>
                 </div>
