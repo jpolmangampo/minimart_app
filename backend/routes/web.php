@@ -32,6 +32,4 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/section', [SectionController::class, 'index'])->name('section');
     Route::post('/section/store', [SectionController::class, 'store'])->name('section.store');
     Route::delete('/section/{id}/destroy', [SectionController::class, 'destroy'])->name('section.destroy');
-
-
 });

@@ -10,7 +10,7 @@
                 <p class="mb-0 text-muted">Section: {{ $product->section ? $product->section->name : 'Uncategorized' }}</p>
                 <p class="mb-0 text-muted">Price: ${{ $product->price }}</p>
 
-                <p class="mt-3 mb-0">{{ $product->description }}</p>
+                <p class="mt-3 mb-0">Description: {{ $product->description }}</p>
             </div>
             <div class="modal-footer border-0">
                 <form action="{{ route('product.destroy', $product->id) }}" method="post">
