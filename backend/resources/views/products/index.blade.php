@@ -9,7 +9,6 @@
     </div>
     <div class="col text-end">
         <a href="{{ route('product.create') }}" class="btn btn-success"><i class="fa-solid fa-plus-circle"></i> New Product</a>
-
     </div>
 </div>
 
@@ -36,7 +35,7 @@
                 <td>
                     <div class="d-flex">
                     <a href="{{ route('product.edit', $product->id) }}" class="btn btn-outline-secondary border-0" title="Edit"><i class="fa-solid fa-pen"></i></a>
-                    <button class="btn btn-outline-danger border-0" title="Delete" data-bs-toggle="modal" data-bs-target="#delete-product-{{ $product->id }}"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn btn-outline-danger border-0 ms-1" title="Delete" data-bs-toggle="modal" data-bs-target="#delete-product-{{ $product->id }}"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
                 </td>
             </tr>

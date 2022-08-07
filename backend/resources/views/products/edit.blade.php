@@ -56,8 +56,8 @@
                     @enderror
                 </div>
 
-                <a href="{{ route('index') }}" class="btn btn-outline-warning">Cancel</a>
-                <button type="submit" class="btn btn-warning fw-bold px-5"><i class="fa-solid fa-check"></i> Save</button>
+                <a href="{{ route('index') }}" class="btn btn-outline-secondary">Cancel</a>
+                <button type="submit" class="btn btn-secondary fw-bold px-5"><i class="fa-solid fa-check"></i> Save changes</button>
             </form>
         </div>
     </div>
